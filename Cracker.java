@@ -71,8 +71,7 @@ public class Cracker {
     }
 
     public String drawFreqChart(ArrayList<Double> data, ArrayList<String> labels) {
-        String chart = Charts.drawChart(data, labels);
-        return chart;
+        return Charts.drawChart(data, labels);
     }
 
     public void calculateFrequencies(String cipherText) {
