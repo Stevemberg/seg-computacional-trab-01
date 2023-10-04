@@ -159,7 +159,7 @@ public class Menu {
         if (fileName == null || fileName.isBlank())
             fileName = "ciphertext.txt";
 
-        cipherText = FileManipulation.readFile(fileName);
+        cipherText = FileManipulation.readFile(fileName,true);
         viginere.setCipherText(cipherText);
 
         if (viginere.getKey() != null && viginere.getKey().length() > 0) {
@@ -223,7 +223,7 @@ public class Menu {
             ShellWrapper.clear();
             System.out.println("Nenhum texto crifrado foi carregado.");
             System.out.println("Texto do arquivo ciphertext.txt considerado para utilização.");
-            viginere.setCipherText(FileManipulation.readFile("ciphertext.txt"));
+            viginere.setCipherText(FileManipulation.readFile("ciphertext.txt",true));
         }
         System.out.println("\nQuantas linhas da tabela devem ser elaboradas?  (10)");
         String nextLine = scan.nextLine().trim();
